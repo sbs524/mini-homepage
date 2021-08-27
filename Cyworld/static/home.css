@@ -54,13 +54,13 @@
 }
 
 .interval{
-    margin-bottom:3px;
+    margin-bottom:5px;
 }
 
 .icon{
     border-radius:3px;
     color:white;
-    padding:0 6px;
+    padding:1px 6px;
     margin-right:6px;
 }
 .icon_red{
