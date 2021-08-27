@@ -1,0 +1,43 @@
+.album_container{
+    flex:2;
+    background-color: white;
+    border-radius: 10px;
+    position:relative;
+}
+
+.album_overflow{
+    position:absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    overflow-y:auto;
+    
+    padding-left:15px;
+}
+
+.album_title{
+    background-color: lightgrey;
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-left:10px;
+
+    margin-top:15px;
+}
+
+.album_img{
+    width:300px;
+    height:300px;
+}
+
+.album_img_img{
+    margin-left:30%;
+    margin-top:30px;
+    margin-bottom:100px;
+    width:100%;
+}
+
+.album_content{
+    padding-top:60px;
+    margin-bottom:60px;
+}

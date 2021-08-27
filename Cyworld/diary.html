@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>2021 MINI HOMEPAGE</title>
+    <link rel="stylesheet" href="./static/font.css" />
+    <link rel="stylesheet" href="./static/layout.css" />
+    <link rel="stylesheet" href="./static/diary.css" />
+    <script src="https://kit.fontawesome.com/44f02e60d4.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <div class="bookcover">
+      <div class="bookdot">
+        <div class="page">
+
+
+          <div class="profile">
+            <div class="profile_date">Today <span style="color:red">15</span>|Total 001</div>
+            <div class=profile_container>
+              <p>
+              <img
+              class="profile_img"
+              src="static/images/bonobono.jpg"
+              alt=보노보노 />
+              </p>
+              <div class="profile_content">
+                무언가를 찾고 있다면 길을 헷갈려선 안돼. 한번이라도 헷갈리면
+                더이상 찾을 수 없게 되니까. 그치만 헷갈려도 괜찮아.
+                다른 것이 찾아질 테니까.<br>
+                -보노보노
+              </div>
+              <div class="profile_name">보노보노(<span style="color:blue">♂</span>)</div>
+              <div class="profile_dropdown">
+                <div class="dropdown_btn">
+                  <div class="dropdown_title">파도타기</div>
+                  <div class="triangle_down"></div>
+                </div>
+                <div class="dropdown_content">
+                  <a href="https://cafe.naver.com/codeuniv" target="_blank">코뮤니티로 가기</a>
+                  <a href="https://www.instagram.com/coding_comu/"
+                  target="_blank">인스타그램으로 가기</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="column2">
+            <div class="column2_textbox">
+              <div class="column2_text1">보노121의 브금저장소 </div>
+              <div class="column2_text2"> https://url주소/나중에 입력</div>
+            </div>
+            <div class="diary_container">
+                <div class="date">
+                    <div class="date_today">08.23 MON</div>
+                    <div class="date_calendar">
+                        <span class="red">1 </span>2 3 4 5 6 <span class="blue">7 </span>
+                        <span class="red">8 </span>9 10 11 12 13 <span class="blue">14 </span>
+                        <span class="red">15 </span>16 17 18 19 20 <span class="blue">21 </span>
+                        <span class="red">22 </span>23 24 25 26 27 <span class="blue">28 </span>
+                        <span class="red">29 </span>30 31
+                    </div>
+                </div>
+                <div class="diary_content">
+                    <div class="content_container">
+                        <div class="content_title">2021.08.09 월 12:10</div>
+                        <div class="content_content">
+                            모각코 1일차다.<br>사이트를 만들 수 있다는 생각에
+                            <br>설레기도 하고 또 열심히 해야겠다는 생각을 했다.
+                            <br>사람은 항상 초심을 되새겨야 한다는데
+                            <br>나도 자만하지 않도록 초심을 되새겨야겠다.
+                            <br>(자만할 실력이 쌓인다면..ㅎㅎ)
+                        </div>
+                    </div>
+                    <div class="content_container">
+                        <div class="content_title">2021.08.16 월 12:10</div>
+                        <div class="content_content">
+                            모각코 6일차다.<br>첫주는 적응하는데 조~금 어려웠지만
+                            <br>나름 혼자 찾아보면서
+                            <br>홈페이지를 만들었는데
+                            <br>어려웠지만 꽤 재미있었고
+                            <br>보람찼었다.
+                        </div>
+                    </div>
+                    <div class="content_container">
+                        <div class="content_title">2021.08.23 월 12:10</div>
+                        <div class="content_content">
+                            모각코 11일차!<br>html을 잠깐 만만하게 볼뻔했는데
+                            <br>저번주에 호되게 당했다ㅜㅜ
+                            <br>진도 따라잡기 급급했고 어려웠지만
+                            <br>결국 만들었다.
+                            <br>이번주가 마지막이니만큼
+                            <br>더 열심히 만들어야겠다!
+
+                        </div>
+                    </div>
+
+                    <div class="secret_container">
+                      <button class="secret" onclick="getTextFile()">
+                        <i class="fas fa-lock"></i> 보노의 비밀일기
+                      </button>
+                    </div>
+                    <div class="content_container" id="secret_box">
+                      <div class="content_title">수달의 비밀 일기</div>
+                      <div class="content_content" id="secret_diary"></div>
+                    </div>
+
+                </div>
+            </div>
+          </div>
+
+
+          <div class="column3">
+            <a class="home" href="./home.html">홈</a>
+            <a class="home" href="./diary.html">다이어리</a>
+            <a class="home" href="./album.html">사진첩</a>
+            <a class="home" href="./guestbook.html">방명록</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function getTextFile()
+      {
+        var input = document.createElement("input");
+        input.type = "file";
+        input.accept = "text/plain";
+        input.onchange = function (event) {
+          processFile(event.target.files[0]);
+        };
+        input.click();
+      }
+
+      function processFile(file) {
+        var reader = new FileReader();
+        reader.readAsText(file, "utf-8");
+
+        reader.onload = function () {
+          document.getElementById("secret_diary").innerText = reader.result;
+          document.getElementById("secret_box").style.display = "block";
+        };
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+.guest_container{
+    flex:2;
+    background-color: white;
+    border-radius: 10px;
+    padding:20px;
+
+    position:relative;
+}
+
+.guest_overflow{
+    position:absolute;
+    top:10px;
+    right:10px;
+    left:10px;
+    bottom:10px;
+
+    overflow:auto;
+}
+
+.guest_title{
+    background-color:lightgrey;
+    padding:10px;
+    font-size: 16px;
+
+    margin-bottom:1.5rem;
+}
+
+.blue{
+    color:blue;
+}
+
+.guest_content{
+    display:flex;
+    margin-bottom:3rem;
+}
+
+.guest_img_dog{
+    flex:0 0 8rem;
+    height:8rem;
+    background-image:url("./images/dog.jpg");
+    background-size: contain;
+}
+
+.guest_img_turtle{
+    flex:0 0 8rem;
+    height:8rem;
+    background-image:url("./images/turtle.jpg");
+    background-size: contain;
+}
+
+.guest_img_giraffe{
+    flex:0 0 8rem;
+    height:8rem;
+    background-image:url("./images/giraffe.jpg");
+    background-size: contain;
+}
+
+.guest_text{
+    flex:1;
+    font-size:16px;
+
+    display:flex;
+    align-items: center;
+    margin-left:2rem;
+}

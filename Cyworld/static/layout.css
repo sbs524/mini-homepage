@@ -1,0 +1,195 @@
+body{
+    background-image: url('./images/pattern.png');
+    background-size: 80px 80px;
+    background-color:rgb(177, 174, 174);
+
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+
+    font-size:14px;
+    font-family:"DungGeunMo";
+}
+
+.bookcover{
+    position:relative;
+    top: 50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+
+    width:900px;
+    height:600px;
+    background-color: rgb(171, 207, 223);
+    border-radius: 10px;
+}
+
+.bookdot{
+    border:2px dashed white;
+    border-radius:10px;
+
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+}
+
+.page{
+    background-color:rgb(228, 222, 222);
+    border-radius:10px;
+
+    position:absolute;
+    top:10px;
+    left:10px;
+    right:10px;
+    bottom:10px;
+
+    display:flex;
+    padding:15px;
+}
+
+
+.profile{
+    flex:0.4;
+    display:flex;
+    flex-direction: column;
+    margin-right:20px;
+}
+
+.profile_date{
+    flex:0.1;
+    text-align: center;
+    margin:2px;
+}
+
+.profile_container{
+    flex:2;
+    background-color: white;
+    border-radius:10px;
+    padding-top:20px;
+    padding-left:30px;
+    padding-right:30px;
+    padding-bottom:30px;
+    display:flex;
+    flex-direction: column;
+}
+
+.profile_img{
+    flex:none;
+    width:100%;
+    height:100%;
+}
+
+.profile_content{
+    flex:1;
+    margin-top:20px;
+}
+
+.profile_name{
+    flex:0;
+}
+.profile_dropdown {
+    flex:0;
+    border: 1px solid #c9d4da;
+    padding: 5px;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    position: relative;
+  }
+  
+  .triangle_down {
+    width: 0;
+    height: 0;
+    border-left: 4.5px solid transparent;
+    border-right: 4.5px solid transparent;
+    border-top: 5px solid #838383;
+  }
+  
+  .dropdown_btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .dropdown_content {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  .profile_dropdown:hover > .dropdown_content {
+    display: block;
+  }
+  
+  .dropdown_content > a {
+    display: block;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    padding: 6px;
+    color: black;
+    text-decoration: none;
+  }
+  
+  .dropdown_content > a:hover {
+    background-color: #f1f1f1;
+  }
+
+
+.column2{
+    flex:1;
+
+    display:flex;
+    flex-direction:column;
+}
+
+.column2_textbox{
+    flex:0.1;
+
+    display:flex;
+    margin-top:4px;
+}
+.column2_text1{
+    flex:1;
+}
+
+.column2_text2{
+    flex:1;
+
+    font-size:0.8em;
+    text-align: right;
+    padding-top: 3px;
+}
+
+
+
+
+.column3{
+    flex:0.15;
+
+    display:flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.home{
+    flex:0.05;
+    padding:6px 0 0 3px;
+    margin-bottom:10px;
+    border-radius:0px 5px 5px 0px;
+    background-color: rgb(0, 152, 218);
+    color:white;
+}
+
+
+.column3 > a{
+    text-decoration:none;
+}
+
+.column3 > a:hover{
+    background-color: rgb(136, 188, 211);
+}
